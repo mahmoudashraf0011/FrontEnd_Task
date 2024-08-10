@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import LoginHook from '../../Logic/LoginHook'
 import { ToastContainer } from 'react-toastify';
 
 export default function Login() {
  const [userName,pass,onChangeUsername,onChangePass,onHandleSubmit]=LoginHook();
-
+  const navigate=useNavigate();
 
  useEffect(()=>{
   if(localStorage.getItem("token")){
-    window.location.href="https://mahmoudashraf0011.github.io//FrontEnd_Task//#//profile"
+    navigate("/#/profile")
    }
  },[])
 
