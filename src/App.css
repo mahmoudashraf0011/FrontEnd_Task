@@ -162,7 +162,7 @@ nav > ul > li > a:hover{
 }
 @media (min-width: 138px) and (max-width: 831px) {
     .auth{
-        width: 70%;
+        width: 80%;
     }
 }
 
