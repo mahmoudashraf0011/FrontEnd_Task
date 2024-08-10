@@ -9,7 +9,7 @@ export default function Login() {
 
  useEffect(()=>{
   if(localStorage.getItem("token")){
-    window.location.href="/profile"
+    window.location.href="/#/profile"
    }
  },[])
 
