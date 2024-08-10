@@ -43,6 +43,10 @@ nav > ul > li > a:hover{
     font-size: 20px;
 
 }
+.welcome > span{
+    color: cadetblue;
+    font-weight: bold;
+}
  
 @media (min-width: 408px) and (max-width: 979px) {
     nav{

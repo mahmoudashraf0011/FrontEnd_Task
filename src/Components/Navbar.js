@@ -35,7 +35,7 @@ export default function Navbar() {
         {
         check?
         <ul>
-          <li className='welcome'>Welcome {user.username}! </li>
+          <li className='welcome'>Welcome <span>{user.username}!</span>  </li>
           <li className='logout' onClick={onChangeLogout}><Link to="#">Logout</Link></li>
           </ul>:
             <ul>
