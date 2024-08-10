@@ -9,7 +9,7 @@ export default function Login() {
 
  useEffect(()=>{
   if(localStorage.getItem("token")){
-    window.location.href="/FrontEnd_Task/#/profile"
+    window.location.href="https://mahmoudashraf0011.github.io//FrontEnd_Task//#//profile"
    }
  },[])
 
