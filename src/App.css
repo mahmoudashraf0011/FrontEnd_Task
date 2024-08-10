@@ -48,7 +48,7 @@ nav > ul > li > a:hover{
     font-weight: bold;
 }
  
-@media (min-width: 408px) and (max-width: 979px) {
+@media (min-width: 320px) and (max-width: 979px) {
     nav{
         padding: 30px 20px;
     }
@@ -160,7 +160,7 @@ nav > ul > li > a:hover{
         width: 50%;
     }
 }
-@media (min-width: 408px) and (max-width: 831px) {
+@media (min-width: 320px) and (max-width: 831px) {
     .auth{
         width: 70%;
     }
@@ -209,7 +209,7 @@ nav > ul > li > a:hover{
     font-weight: normal;
 }
 
-@media (min-width: 408px) and (max-width: 875px) {
+@media (min-width: 320px) and (max-width: 875px) {
 .profileContent{
     flex-direction: column;
     justify-content: center;
@@ -275,7 +275,7 @@ width: 60%;
      background-color:cadetblue;
      border-radius: 10%;
     }
-    @media (min-width: 408px) and (max-width: 875px) {
+    @media (min-width: 320px) and (max-width: 875px) {
         .footer-content .footer-logo img{
             width: 150px;
             height: 100px;

@@ -10,6 +10,7 @@ export default function Login() {
  useEffect(()=>{
   if(localStorage.getItem("token")){
     navigate("/profile")
+    window.location.reload();
    }
  },[])
 
