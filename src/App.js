@@ -16,14 +16,14 @@ function App() {
   return (
     <div className="App">
 
-      <HashRouter>
+      <BrowserRouter>
        <Navbar />
       <Routes>
           <Route path='/' element={ <Login />}/>
           <Route path='/auth/register' element={ <Register />}/>
           <Route path='/profile' element={ <Profile />}/>
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
       <Footer />
 
     </div>
