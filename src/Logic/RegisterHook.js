@@ -109,13 +109,6 @@ export default function RegisterHook() {
   
                 }
 
-                setFname("");
-                setLname("");
-                setPhone("");
-                setEmail("");
-                setUserName("");
-                setPass("");
-                setConfirmPass("")
     
 
   
