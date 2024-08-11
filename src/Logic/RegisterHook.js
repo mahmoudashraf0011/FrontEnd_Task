@@ -73,7 +73,7 @@ export default function RegisterHook() {
                 setLoad(true)
                 validate();
                 try {
-                    const res=await baseURL.post("https://dev.backend-api.goldady.com/user-api/auth/register",{
+                    const res=await baseURL.post("/auth/register",{
                         first_name:fname,
                         last_name:lname,
                         phone:phone,

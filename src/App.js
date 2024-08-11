@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Footer from './Components/Footer';
 import Cookies from 'universal-cookie';
 import ProtectedRouter from './Components/ProtectedRouter';
+import baseURL from './Components/API/BaseURL';
 
 function App() {
   const cookie=new Cookies();

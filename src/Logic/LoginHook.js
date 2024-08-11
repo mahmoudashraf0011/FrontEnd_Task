@@ -30,13 +30,13 @@ export default function LoginHook() {
         e.preventDefault();
         validate()
         try {
-            const res=await baseURL.post("https://dev.backend-api.goldady.com/user-api/auth/login",{
+            const res=await baseURL.post("/auth/login",{
                         username:userName,
                         password:pass,
                     })
-                    console.log(res);
+              
             if(res.status==200){
-                console.log(res);
+            
                 cookie.set("token",res.data.data.accessToken)
                 localStorage.setItem("user",JSON.stringify(res.data.data.user))
                 Notify("User Logged in successfully.","success");

@@ -4,31 +4,10 @@ import { Link, Navigate, json, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import Notify from './Notify';
 import Cookies from 'universal-cookie';
+import baseURL from './API/BaseURL';
+import LogoutHook from '../Logic/LogoutHook';
 export default function Navbar() {
-  const navigate=useNavigate();
-  const cookie=new Cookies();
-  
-  let check=false
-  let user={};
-  if(cookie.get("token")){
-    check=true
-  }
-  if(localStorage.getItem("user")){
-   user=JSON.parse(localStorage.getItem("user"))
-   console.log(user);
-  }
-
-  const onChangeLogout=(e)=>{
-    let confirm=window.confirm("Are you sure to Logout?");
-    if(confirm==true){
-      cookie.remove("token");
-      localStorage.removeItem("user");
-       Notify("User Logged out Successfully","success")
-      setTimeout(() => {
-        navigate("/")
-      }, 2500);
-    } 
-  }
+const [check ,user,onChangeLogout]=LogoutHook();
   return (
     <nav >
       <div className='logo'>
