@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Notify from '../Components/Notify'
 import { useNavigate } from 'react-router-dom'
+import baseURL from '../Components/API/BaseURL'
 
 export default function RegisterHook() {
     const [fname,setFname]=useState("")
@@ -72,7 +73,7 @@ export default function RegisterHook() {
                 setLoad(true)
                 validate();
                 try {
-                    const res=await axios.post("https://dev.backend-api.goldady.com/user-api/auth/register",{
+                    const res=await baseURL.post("https://dev.backend-api.goldady.com/user-api/auth/register",{
                         first_name:fname,
                         last_name:lname,
                         phone:phone,

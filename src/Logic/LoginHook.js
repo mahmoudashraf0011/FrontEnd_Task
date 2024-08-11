@@ -2,11 +2,15 @@ import React, { useEffect, useState } from 'react'
 import Notify from '../Components/Notify'
 import { json, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import baseURL from '../Components/API/BaseURL'
+import Cookies from 'universal-cookie'
 
 export default function LoginHook() {
     const [userName,setUserName]=useState("")
     const [pass,setPass]=useState("")
     const navigate=useNavigate();
+    const cookie=new Cookies();
+
     const onChangeUsername=(e)=>{
         setUserName(e.target.value)
     }
@@ -26,14 +30,14 @@ export default function LoginHook() {
         e.preventDefault();
         validate()
         try {
-            const res=await axios.post("https://dev.backend-api.goldady.com/user-api/auth/login",{
+            const res=await baseURL.post("https://dev.backend-api.goldady.com/user-api/auth/login",{
                         username:userName,
                         password:pass,
                     })
                     console.log(res);
             if(res.status==200){
                 console.log(res);
-                localStorage.setItem("token",res.data.data.accessToken)
+                cookie.set("token",res.data.data.accessToken)
                 localStorage.setItem("user",JSON.stringify(res.data.data.user))
                 Notify("User Logged in successfully.","success");
                 setTimeout(() => {

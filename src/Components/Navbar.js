@@ -3,11 +3,14 @@ import logo from '../logo.svg'
 import { Link, Navigate, json, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import Notify from './Notify';
+import Cookies from 'universal-cookie';
 export default function Navbar() {
   const navigate=useNavigate();
+  const cookie=new Cookies();
+  
   let check=false
   let user={};
-  if(localStorage.getItem("token")){
+  if(cookie.get("token")){
     check=true
   }
   if(localStorage.getItem("user")){
@@ -18,7 +21,7 @@ export default function Navbar() {
   const onChangeLogout=(e)=>{
     let confirm=window.confirm("Are you sure to Logout?");
     if(confirm==true){
-      localStorage.removeItem("token");
+      cookie.remove("token");
       localStorage.removeItem("user");
        Notify("User Logged out Successfully","success")
       setTimeout(() => {

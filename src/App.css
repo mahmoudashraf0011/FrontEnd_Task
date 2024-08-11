@@ -64,7 +64,12 @@ nav > ul > li > a:hover{
 
 
 /* Login && Register*/
-.auth{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .auth{
     width: 30%;
     margin: 40px auto 90px auto;
     background-color: #373737;
@@ -75,17 +80,19 @@ nav > ul > li > a:hover{
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
     text-align: center;
-}
-.auth >h2{
+  }
+  .auth >h2{
     text-transform: uppercase;
     font-size: 30px;
     margin-bottom: 20px;
     color: #fff;
     font-weight: bold;
     letter-spacing: 1px;
-}
-.auth > form > input,.auth > form > select{
-    width: 90%;
+  }
+  
+  .auth > .loginForm > .input,.auth > .loginForm > Button{
+    
+  
     margin-bottom: 15px;
     padding: 10px;
     border: 0;
@@ -95,11 +102,18 @@ nav > ul > li > a:hover{
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     outline: unset;
-    font-size: 20px;
-}
-.auth > form > button{
-    border: unset;
-    outline: unset;
+    font-size: 60px;
+    background-color: #fff;
+  
+  }
+  .auth > .loginForm > .input{
+    width: 150%;
+  
+    margin-left: -20%;
+  }
+  .auth > .loginForm > Button{
+    outline: 0;
+    border: 0;
     width: 250px;
     text-transform: uppercase;
     padding: 10px;
@@ -121,20 +135,28 @@ nav > ul > li > a:hover{
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     cursor: pointer;
-}
-.auth > form > button:hover{
+    outline: 0;
+    border: 0;
+  }
+  .auth > .loginForm > button:hover{
     background-color: #000;
     color: white;
-    
-}
-.auth > p{
+  
+    outline: 0;
+    border: 0;
+  }
+  .auth > .loginForm > .input:focus{
+    outline: none;
+    border: none;
+  }
+  .auth > p{
     text-transform: uppercase;
     color: #fff;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-}
-.auth > p >a {
+  }
+  .auth > p >a {
     text-decoration: none;
     color: #fff;
     border: 1px solid #9e9a9a;
@@ -145,26 +167,74 @@ nav > ul > li > a:hover{
     -ms-transition:background-color 0.5s,border-radius 0.5s;
     -o-transition:background-color 0.5s,border-radius 0.5s;
     cursor: pointer;
-
-}
-.auth > p >a:hover{
+  
+  }
+  .auth > p >a:hover{
     background-color: #000;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-}
-@media (min-width: 830px) and (max-width: 1250px) {
+  }
+  
+  @media (min-width: 768px) and (max-width: 1400px) { 
+  .auth{
+    width: 40%;
+  }
+  .auth > .loginForm > .input{
+    width: 120%;
+  
+    margin-left: -10%;
+  }
+  .auth > .loginForm > Button{
+    width: 200px;
+    font-size: 17px;
+  }
+   }
+   
+  
+  @media (max-width: 767px) { 
     .auth{
-        width: 50%;
+      width: 60%;
     }
-}
-@media (min-width: 138px) and (max-width: 831px) {
-    .auth{
-        width: 80%;
+    .auth > .loginForm > .input{
+      width: 140%;
+    
+
     }
-}
+    .auth > .loginForm > Button{
+      width: 200px;
+      font-size: 17px;
+    }
+    .auth > p{
+        font-size: 12px;
+    }
+   }
+   
+  
+  @media (max-width: 515px) { 
+  
+      .auth{
+        width: 90%;
+      }
+      .auth > .loginForm > .input{
+        width: 110%;
+      
+        margin-left:-5px;
+      }
+      .auth > .loginForm > Button{
+        width: 150px;
+        font-size: 15px;
+        margin-left:33px;
+      }
+          .auth > p{
+        font-size: 10px;
+    }
+   
+     }
+   
+  
 
 
 /* profile */
